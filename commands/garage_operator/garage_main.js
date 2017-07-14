@@ -22,7 +22,7 @@ checkOut(regnumber){
       if(regnumber===cars[i].reg){
         cars.splice(i,1);
       }
-    }
+    };
 }
 
 outputCars(){
@@ -32,12 +32,13 @@ outputCars(){
     for(var i=0;i<cars.length;i++){
     
         results=results+cars[i].make+", "+cars[i].model+", "+cars[i].reg;
-   }
+    };
 
-   if(results=="")
-    return "No cars in the garage!"
-    else
-    return results
+   if(results==""){
+        return "No cars in the garage!";
+    }else{
+        return results;
+    }
 }
 
 checkNumberOfCarsAvailableInGarage(){
@@ -46,16 +47,16 @@ checkNumberOfCarsAvailableInGarage(){
 
 calculateBill(registration){
 
-     var totalBill = ""
+     var totalBill = "";
 
     for(var i=0;i<cars.length;i++){
         if(registration===cars[i].reg){
             var total=cars[i].smallfaults*10+cars[i].mediumfaults*20+cars[i].largefaults*30;
       
             totalBill="The total bill for: "+cars[i].make+", "+cars[i].model+", "+cars[i].reg+" is "+ "£" + total;
-            return totalBill
+            return totalBill;
         }
-   }
+   };
     return "No car found!";
 }
 

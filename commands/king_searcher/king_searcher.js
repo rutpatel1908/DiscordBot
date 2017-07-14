@@ -27,7 +27,7 @@ class KingSearcherCommand extends commando.Command{
         
         const search_king = new King_Searcher_Main();
        
-        return message.reply(search_king.displayResult(kingname))
+        return message.reply(search_king.displayResult(kingname));
     }
 
     

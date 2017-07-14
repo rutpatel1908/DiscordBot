@@ -31,7 +31,7 @@ class SquadSearcherCommand extends commando.Command{
      async run(message, {squadname,membername}){
 
         const search_squad = new Squad_Searcher_Main();
-        return search_squad.displayResult(squadname,membername,(a)=>message.reply(a))
+        return search_squad.displayResult(squadname,membername,(a)=>message.reply(a));
     }
 }
 

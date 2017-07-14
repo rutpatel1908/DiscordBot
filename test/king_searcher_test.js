@@ -9,8 +9,8 @@ describe('JSON Data Test', function() {
     request.get('https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json', function(error, res) {
       assert.equal(res.status, 200);
       done()
-    })
-  })
+    });
+  });
 });
 
 describe('King Data Check', function() {
@@ -18,9 +18,9 @@ describe('King Data Check', function() {
     request.get('https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json', function(error, res) {
     
         var checker = searh_king.displayResult("Edmund lronside");
-        assert.equal("Edmund lronside,United Kingdom , 1016",checker)
+        assert.equal("Edmund lronside,United Kingdom , 1016",checker);
         console.log(checker)
       done()
-    })
-  })
+    });
+  });
 });

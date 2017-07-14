@@ -32,7 +32,7 @@ class PokemonCalculatorCommand extends commando.Command{
 
         const pokemon = new Pokemon_Main();
        
-        return message.reply(pokemon.displayResult(typeone,typetwo))
+        return message.reply(pokemon.displayResult(typeone,typetwo));
     }
 
 }

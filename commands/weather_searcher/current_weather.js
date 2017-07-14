@@ -23,7 +23,7 @@ class CurrentWeatherCommand extends commando.Command{
     async run(message, {locationname}){
 
       const getCurrentWeather = new Weather_Searcher_Main();
-      return getCurrentWeather.getCurrentWeather(locationname,(a)=>message.reply(a))
+      return getCurrentWeather.getCurrentWeather(locationname,(a)=>message.reply(a));
     }
 
 }

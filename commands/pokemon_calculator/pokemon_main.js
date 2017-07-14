@@ -26,22 +26,22 @@ var moves  = {
 
 class Pokemon_Main {
 
-    constructor() {}
+    constructor() {};
 
     displayResult(typeOnePokemon, typeTwoPokemon){
 
-        var result = ""
+        var result = "";
 
         var getKey = parseInt(typeKeys[typeTwoPokemon]);
 
             if(typeOnePokemon == typeTwoPokemon){
 
-                result = "Two types cant be same"
-                return result
+                result = "Two types cant be same";
+                return result;
             }else{
                 var a = moves[typeOnePokemon][getKey];
-                result = typeOnePokemon + " " + "VS " + " " + typeTwoPokemon + " = " + " " + a + "x"
-                return result
+                result = typeOnePokemon + " " + "VS " + " " + typeTwoPokemon + " = " + " " + a + "x";
+                return result;
             }
         
     }

@@ -25,7 +25,7 @@ class MovieSearcherCommand extends commando.Command{
     async run(message, {moviename}){
 
         const search_movie = new Movie_Searcher_Main();
-        return search_movie.displayResult(moviename,(a)=>message.reply(a))
+        return search_movie.displayResult(moviename,(a)=>message.reply(a));
       
     }
 }

@@ -11,9 +11,9 @@ class King_Searcher_Main {
             if (!error && response.statusCode === 200) {
                 retrievedJSONObjects = JSON.parse(body);
             }else {
-                 console.log("Got an error: ", error, ", status code: ", response.statusCode)
+                 console.log("Got an error: ", error, ", status code: ", response.statusCode);
             }
-        })
+        });
     }
     
     
@@ -25,15 +25,15 @@ class King_Searcher_Main {
             if(nameOfKing === retrievedJSONObjects[i].nm){
                 console.log(retrievedJSONObjects[i].nm + "," + retrievedJSONObjects[i].cty + " , " + retrievedJSONObjects[i].yrs);
                 result = (retrievedJSONObjects[i].nm + "," + retrievedJSONObjects[i].cty + " , " + retrievedJSONObjects[i].yrs);
-                return result
+                return result;
                 break;
             }
-        }
+        };
                     
         if(nameOfKing != retrievedJSONObjects[i].nm){
-            result = "King not found"
-            return result
-        }
+            result = "King not found";
+            return result;
+        };
     
 
     }

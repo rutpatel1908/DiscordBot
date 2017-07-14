@@ -27,7 +27,7 @@ class ForecastWeatherCommand extends commando.Command{
     async run(message, {locationname,forecastdays}){
 
       const getCurrentWeather = new Weather_Searcher_Main();
-      return getCurrentWeather.getForcastedWeather(locationname,forecastdays,(a)=>message.reply(a))
+      return getCurrentWeather.getForcastedWeather(locationname,forecastdays,(a)=>message.reply(a));
     }
 
 }

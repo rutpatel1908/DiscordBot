@@ -3,11 +3,11 @@ var retrievedJSONObjects;
 
 class Weather_Searcher_Main {
 
-    constructor(){}
+    constructor(){};
 
     getCurrentWeather(nameOfLocation,callback){
 
-        var result = ""
+        var result = "";
 
         var request = require("request");
 
@@ -25,7 +25,7 @@ class Weather_Searcher_Main {
 
                 body = JSON.parse(body);
 
-                result = "\n" + "Weather for: " + body.location.name + "\n" + "Condition: " + body.current.condition.text + "\n" + body.current.temp_c + " c" + "\n" + body.current.temp_f + " f" + "\n"
+                result = "\n" + "Weather for: " + body.location.name + "\n" + "Condition: " + body.current.condition.text + "\n" + body.current.temp_c + " c" + "\n" + body.current.temp_f + " f" + "\n";
                 callback( result);
                 return result;
             });
@@ -33,7 +33,7 @@ class Weather_Searcher_Main {
         
     getForcastedWeather(nameOfLocation,numberOfDays,callback){
 
-        var result = ""
+        var result = "";
 
         var request = require("request");
 
@@ -52,15 +52,15 @@ class Weather_Searcher_Main {
 
                 body = JSON.parse(body);
 
-                result = "\n" + "Current Weather for: " + body.location.name + "\n" + "Condition: " + body.current.condition.text + "\n" + body.current.temp_c + " c" + "\n" + body.current.temp_f + " f" + "\n"
-                callback(result)
+                result = "\n" + "Current Weather for: " + body.location.name + "\n" + "Condition: " + body.current.condition.text + "\n" + body.current.temp_c + " c" + "\n" + body.current.temp_f + " f" + "\n";
+                callback(result);
                 
 
                 for(var i=0; i < body.forecast.forecastday.length; i++){
               
-                    result = "\n" + "Date: " + body.forecast.forecastday[i].date + "\n" + "Condition: " + body.forecast.forecastday[i].day.condition.text + "\n" + "Maximum Temp in C: " + body.forecast.forecastday[i].day.maxtemp_c + " c" + "\n" + "Maximum Temp in F: " + body.forecast.forecastday[i].day.maxtemp_f + " f" + "\n" + "Minimum Temp in C: " + body.forecast.forecastday[i].day.mintemp_c + " c" + "\n" + "Minimum Temp in F: " + body.forecast.forecastday[i].day.mintemp_f + " f" + "\n"
-                    callback(result)                   
-                }
+                    result = "\n" + "Date: " + body.forecast.forecastday[i].date + "\n" + "Condition: " + body.forecast.forecastday[i].day.condition.text + "\n" + "Maximum Temp in C: " + body.forecast.forecastday[i].day.maxtemp_c + " c" + "\n" + "Maximum Temp in F: " + body.forecast.forecastday[i].day.maxtemp_f + " f" + "\n" + "Minimum Temp in C: " + body.forecast.forecastday[i].day.mintemp_c + " c" + "\n" + "Minimum Temp in F: " + body.forecast.forecastday[i].day.mintemp_f + " f" + "\n";
+                    callback(result);                   
+                };
             });
     } 
    

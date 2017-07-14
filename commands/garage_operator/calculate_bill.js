@@ -1,20 +1,20 @@
-const commando = require('discord.js-commando');
-const Garage_Main = require('../../commands/garage_operator/garage_main');
+const commando = require("discord.js-commando");
+const Garage_Main = require("../../commands/garage_operator/garage_main");
 
 
 class CalculateBillCarCommand extends commando.Command{
 
     constructor(client){
         super(client, {
-            name: 'calculatebill',
-            group: 'garage_operator',
-            memberName: 'calculatebill',
-            description: 'Calculate Bill For Car',
+            name: "calculatebill",
+            group: "garage_operator",
+            memberName: "calculatebill",
+            description: "Calculate Bill For Car",
             args: [
 				{
-					key: 'regnumber',
-					prompt: 'What is the reg number?\n',
-					type: 'string'
+					key: "regnumber",
+					prompt: "What is the reg number?\n",
+					type: "string"
 				
 				}
 			]

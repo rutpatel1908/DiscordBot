@@ -17,7 +17,7 @@ class Movie_Searcher_Main {
                 {
                     query: nameOfMovie,
                     api_key: '324938bccc324fb58e236a92cb0a9bc3' },
-                    body: '{}' 
+                    body: '{}'
                 };
 
             request(options, function (error, response, body) {
@@ -29,11 +29,11 @@ class Movie_Searcher_Main {
 
                     if(nameOfMovie.ignoreCase === body.results[i].title.ignoreCase){
                         console.log(body.results[i].title + "," + body.results[i].release_date + " , " + body.results[i].overview);
-                        result = body.results[i].title + "," + body.results[i].release_date + " , " + body.results[i].overview
-                        callback(result)
-                        return result
+                        result = body.results[i].title + "," + body.results[i].release_date + " , " + body.results[i].overview;
+                        callback(result);
+                        return result;
                     }else if(nameOfMovie.ignoreCase != body.results[i].title.ignoreCase){
-                        return "Movie information not found"
+                        return "Movie information not found";
                     }
                 }
             });
